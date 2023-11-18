@@ -1,0 +1,257 @@
+body {
+  max-width: 1000px;
+  overflow-x: hidden;
+}
+.mobile-navbar a {
+  color: rgb(92, 92, 92) !important;
+}
+.documentation-icons {
+  width: 40px;
+}
+.lift {
+  position: relative;
+  transition: 200ms;
+  top: 0;
+}
+.lift:hover {
+  top: -4px;
+  box-shadow: 0 4px 20px 2px rgba(128, 128, 128, 0.44);
+}
+.accordion-button {
+  background-color: transparent !important;
+  box-shadow: 0 0 0 0 transparent !important;
+}
+#navbar-links-container > .navbar-item {
+  position: relative;
+}
+#navbar-links-container > .navbar-item > .navbar-content {
+  position: absolute;
+  top: 130%;
+  left: -200%;
+}
+.navbar-content {
+  transition: all 1s !important;
+}
+#first-main-content {
+  background-image: url(./images/navbarImages/yellow-armchair-living-room-with-copy-space.jpg);
+  background-size: cover;
+  width: 312px;
+  height: 282px;
+  flex-shrink: 0;
+}
+.navbar-content-info {
+  width: 312px;
+  height: 282px;
+  flex-shrink: 0;
+  background-color: white;
+  z-index: 10;
+}
+#first-main-content > * {
+  z-index: 10;
+}
+#first-main-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 72, 255, 0.511);
+  z-index: 1;
+}
+.main {
+  width: 100vw;
+  height: 700px;
+}
+.main-info {
+  width: 400px;
+  width: clamp();
+}
+@media (max-width: 768px) {
+  .main-info {
+    width: initial;
+  }
+}
+
+/* Navbar content info visibility on hover*/
+.display-flex {
+  display: flex !important;
+  opacity: 0;
+  animation: navbar-content-animation 240ms ease forwards;
+}
+@keyframes navbar-content-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.navbar-item a {
+  padding: 22% !important;
+}
+.navbar-item a:hover {
+  color: rgb(0, 102, 255) !important;
+}
+#settings-item1 {
+  left: 100% !important;
+  width: 220px;
+  background-color: white !important;
+}
+.display-block {
+  display: block !important;
+}
+.display-block2 {
+  display: block !important;
+}
+#pages-content {
+  width: 600px;
+  height: 324px;
+  left: -200px !important;
+  transform: scale(0.9);
+  top: 12px !important;
+}
+#Account-content {
+  width: 240px;
+  height: 194px;
+  color: rgb(68, 68, 68);
+  transform: scale(0.92);
+  top: 24px !important;
+}
+#documentation-content {
+  width: 320px;
+  height: 280px;
+  transform: scale(0.88);
+  left: -80px !important;
+  top: 80% !important;
+}
+#documentation-content h1 {
+  color: rgb(0, 128, 255);
+}
+#documentation-content p {
+  font-size: 15px;
+}
+.services > .service > svg {
+  transform: scale(2) translate(4px, -6px);
+}
+@media (max-width: 1000px) {
+  .service > h5 {
+    font-size: 1.04rem !important;
+  }
+  .service > p {
+    font-size: 0.88rem !important;
+  }
+}
+.useful-resource > .shadow {
+  transition: 200ms;
+}
+.useful-resource > .shadow button {
+  transition: 200ms;
+  border: none !important;
+}
+.useful-resource > .shadow:hover {
+  transform: translateY(-4px);
+}
+.useful-resource > .shadow button:hover {
+  box-shadow: 0 10px 14px 4px rgba(128, 128, 128, 0.421) !important;
+  transform: translateY(-2px);
+}
+.resource-wrapper * {
+  border: none !important;
+  border-bottom: 1px solid rgb(243, 243, 243) !important;
+  box-shadow: 0 0 0px 0px transparent !important;
+}
+.resource-wrapper input:focus {
+  border-bottom: 1px solid blue !important;
+}
+#resource-infos {
+  transform: translateX(32px);
+}
+
+.experience-row svg {
+  transform: scale(2.2) translateX(0px);
+}
+#experience-img-container {
+  perspective-origin: 0;
+  perspective: 2400px;
+  transform-style: preserve-3d;
+}
+#experience-img-container img {
+  backface-visibility: hidden;
+  transform: scale(1.24) translateX(40px) rotateY(-22deg) rotateX(12deg);
+}
+@media (max-width: 992px) {
+  #experience-img-container img {
+    translate: -40px 100px;
+  }
+}
+@media (max-width: 768px) {
+  #experience-img-container img {
+    scale: 0.7;
+    translate: -40px 20px;
+  }
+}
+#customers-img-container {
+  position: relative;
+}
+#customers-img-container img {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 100px;
+}
+@media (max-width: 768px) {
+  #customers-img-container img {
+    border-top-right-radius: initial;
+    border-bottom-right-radius: initial;
+  }
+}
+
+#pricing-card1 {
+  z-index: 2;
+}
+#pricing-card2 {
+  transform: scaleY(0.9);
+  translate: -10px;
+  z-index: 1;
+  align-self: stretch;
+}
+@media (max-width: 768px) {
+  #pricing-card2 {
+    translate: 0px;
+  }
+}
+#pricing-card2 button {
+  background-color: rgb(218, 218, 218);
+}
+#pricing-cards {
+  position: relative;
+}
+#pricing-cards::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: -40%;
+  left: -40%;
+  /* width: 100vw; */
+  height: 740px;
+  background-color: rgb(3, 12, 71);
+  clip-path: polygon(50% 84%, 100% 76%, 100% 100%, 0 100%, 0 76%);
+}
+#faq {
+  position: relative;
+  background-color: rgb(3, 12, 71);
+  transform: translateY(-2px);
+}
+#faq::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -34%;
+  right: -34%;
+  bottom: 0;
+  background-color: rgb(3, 12, 71);
+  z-index: -1;
+}
+.footer-icon {
+  scale: 1.2;
+  cursor: pointer;
+}
+.customer-button svg {
+  transform: translateY(-3.04px);
+}
